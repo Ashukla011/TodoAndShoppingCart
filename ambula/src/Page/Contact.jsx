@@ -14,8 +14,8 @@ export const Contact = () => {
   }
 
   return (
-    <div>
-      <h1>Contact Us</h1>
+    <div style={{margin:"auto",textAlign:"center"}}>
+      <h1 style={{color:"DC143C"}}>Contact Us</h1>
       <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="name">Name:</label>

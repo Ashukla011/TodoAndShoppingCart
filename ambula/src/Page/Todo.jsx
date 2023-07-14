@@ -41,7 +41,7 @@ export const Todo = () => {
    
   return (
     <>
-      <div style={{border:'1px solid black'}}>
+      <div style={{border:'1px solid black',width:"50%",margin:'auto',textAlign:'center'}}>
       <div style={{width:"50%",margin:'auto'}}>
        <input type="text" placeholder='Typeing....' onChange={HandleInputValue} value={text} />
        <button onClick={addTodo}>Add</button>
@@ -67,7 +67,6 @@ export const Todo = () => {
              style={{_hover:{color:"green"}}} onClick={()=>Deleted(i)}/>
              </div>
         ))}
-       {/* </div> */}
        </div>
        <div style={{display:'flex',justifyContent:"space-between"}}>
         <h4>{`TOTAL TASK: ${Todo.length}`}</h4>

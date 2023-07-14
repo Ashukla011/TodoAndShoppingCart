@@ -32,7 +32,7 @@ export const Home = () => {
   let ProductInTheCart=JSON.parse(localStorage.getItem("ambula"))||[]
    function HandleLocalStorage(el){
     ProductInTheCart.push(el)
-    localStorage.setItem("ambul",JSON.stringify(ProductInTheCart))
+    localStorage.setItem("ambula",JSON.stringify(ProductInTheCart))
     alert(`${el.title} add to the cart`)
    }
 

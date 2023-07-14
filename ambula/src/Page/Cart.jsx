@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
- 
+ import styles from '../Styles/Cart.module.css'
 
 export const Cart = () => {
     const [data,setData]=useState([])
 
 const getData=()=>{
-    let ProductInTheCart=JSON.parse(localStorage.getItem('ambul'))||[]
+    let ProductInTheCart=JSON.parse(localStorage.getItem('ambula'))||[]
     setData(ProductInTheCart)
 }
 
@@ -25,12 +25,12 @@ const RemoveItem=(id)=>{
   },0)
   return (
     <>
-        <div style={{display:'flex',justifyContent:"space-between",}}>
-            <div style={{display:'flex',justifyContent:"space-between",}}>
+        <div className={styles.cart}>
+            <div className={styles.cart2}>
             {data.length===0?`Cart is empty`:data.map((product)=>(
-            <div key={product.id}>
+            <div key={product.id} className={styles.productDiv2}>
               <div>
-              <img src={product.image} alt="" style={{width:"10%"}}/>
+              <img src={product.image} alt="" style={{width:"50%"}}/>
               <h2>{product.title}</h2>
               <p>{product.description}</p>
               <p>{`₹${product.price}`}</p>
@@ -48,9 +48,9 @@ const RemoveItem=(id)=>{
            ))}
             </div>
 
-            <div>
+            <div className={styles.total}>
                 <h1>{`Total Item : ${data.length}`}</h1>
-                <h1>{`Sub Total  : ₹${Total}`}</h1>
+                <h1>{`Sub Total  : ₹${Total.toFixed(2)}`}</h1>
             </div>
         </div>
 

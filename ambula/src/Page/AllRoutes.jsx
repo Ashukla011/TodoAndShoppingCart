@@ -5,6 +5,7 @@ import { NotFound } from './NotFound'
 import   {About}      from './About'
 import   {Contact}    from './Contact'
 import { Cart } from './Cart'
+import {Todo} from './Todo'
 export const AllRoutes = () => {
   return (
     <>
@@ -13,6 +14,7 @@ export const AllRoutes = () => {
         <Route path="about" element={<About/>}></Route>
         <Route path="contact" element={<Contact/>}></Route>
         <Route path="cart" element={<Cart/>}/>
+        <Route path='Todo' element={<Todo/>}/>
         <Route path="*" element={<NotFound/>}></Route>
     </Routes>
     </>
